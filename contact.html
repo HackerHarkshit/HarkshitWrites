@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Harkshit Writes</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        color: #333;
+      }
+      header {
+        background-color: #1f2937;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      main {
+        max-width: 700px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        margin-bottom: 1.5rem;
+        color: #1f2937;
+      }
+      label {
+        display: block;
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 0.3rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        resize: vertical;
+      }
+      textarea {
+        min-height: 120px;
+      }
+      button {
+        margin-top: 1.5rem;
+        padding: 12px 25px;
+        background-color: #1f2937;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      button:hover {
+        background-color: #374151;
+      }
+      .contact-info {
+        margin-top: 2rem;
+        font-size: 1rem;
+        color: #555;
+      }
+      .contact-info p {
+        margin: 0.4rem 0;
+      }
+      .social-links a {
+        margin-right: 15px;
+        color: #1f2937;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+      }
+      .social-links a:hover {
+        text-decoration: underline;
+      }
+      .social-links img {
+        width: 24px;
+        height: 24px;
+        margin-right: 6px;
+      }
+      .success-message {
+        color: green;
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+      .error-message {
+        color: red;
+        margin-top: 1rem;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="https://i.imgur.com/3V3Q9yG.png" alt="Harkshit Writes Logo" />
+        <h1>Harkshit Writes</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Contact Me</h2>
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/yourFormID"
+        method="POST"
+      >
+        <label for="name">Name*</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+
+        <label for="email">Email*</label>
+        <input
+          type="email"
+          id="email"
+          name="_replyto"
+          placeholder="your.email@example.com"
+          required
+        />
+
+        <label for="message">Message*</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+
+        <p class="success-message" id="success-message" style="display: none">
+          Thank you! Your message has been sent.
+        </p>
+        <p class="error-message" id="error-message" style="display: none">
+          Oops! Something went wrong. Please try again.
+        </p>
+      </form>
+
+      <div class="contact-info">
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:harkshitwrites@example.com"
+            >harkshitwrites@example.com</a
+          >
+        </p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Follow me on:</strong></p>
+        <div class="social-links">
+          <a
+            href="https://instagram.com/harkshitwrites"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png"
+              alt="Instagram"
+            />
+            Instagram
+          </a>
+          <a
+            href="https://reddit.com/user/harkshitwrites"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/24/2111/2111589.png"
+              alt="Reddit"
+            />
+            Reddit
+          </a>
+          <a
+            href="https://linkedin.com/in/harkshitwrites"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+              alt="LinkedIn"
+            />
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const form = document.getElementById("contact-form");
+      const successMessage = document.getElementById("success-message");
+      const errorMessage = document.getElementById("error-message");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            successMessage.style.display = "block";
+            errorMessage.style.display = "none";
+            form.reset();
+          } else {
+            throw new Error("Network response was not ok.");
+          }
+        } catch (error) {
+          errorMessage.style.display = "block";
+          successMessage.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
